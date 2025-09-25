@@ -1,0 +1,1 @@
+# GUI package for modern PyQt6 interface
