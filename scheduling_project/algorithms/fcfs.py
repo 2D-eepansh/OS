@@ -1,5 +1,3 @@
-# First-Come, First-Served (FCFS) scheduling algorithm
-
 def fcfs(processes):
     """
     First Come First Serve Scheduling
@@ -10,6 +8,8 @@ def fcfs(processes):
     time = 0
     for name, at, bt in processes:
         if time < at:
+            # CPU idle until process arrives
+            schedule.extend(["Idle"] * (at - time))
             time = at
         schedule.extend([name] * bt)
         time += bt
